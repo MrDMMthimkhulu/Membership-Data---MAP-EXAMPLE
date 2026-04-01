@@ -45,10 +45,7 @@
             margin: 0 1rem;
             text-decoration: none;
             font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
+            display: inline-block;
         }
 
         main {
@@ -88,14 +85,16 @@
             font-weight: bold;
         }
 
-        .button:hover {
-            background-color: #76c7aa;
+        /* 🔥 RESPONSIVE MAP FIX (without touching iframe) */
+        .map-wrapper {
+            width: 100%;
+            overflow-x: auto; /* allows scroll if needed */
         }
 
-        /* Center iframe without modifying it */
-        #map iframe {
+        .map-wrapper iframe {
             display: block;
             margin: 2rem auto;
+            max-width: 100%;
         }
 
         footer {
@@ -109,13 +108,55 @@
             margin: 0.5rem 0;
         }
 
+        /* 📱 MOBILE STYLES */
         @media (max-width: 768px) {
+
             header h1 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+            }
+
+            header p {
+                font-size: 0.95rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
             }
 
             section {
-                padding: 2rem 1.25rem;
+                padding: 2rem 1rem;
+            }
+
+            section h2 {
+                font-size: 1.4rem;
+            }
+
+            .button {
+                width: 100%;
+                text-align: center;
+            }
+
+            /* Map scales better visually */
+            .map-wrapper iframe {
+                width: 100%;
+                height: 350px;
+            }
+        }
+
+        /* 📲 SMALL PHONES */
+        @media (max-width: 480px) {
+
+            header h1 {
+                font-size: 1.4rem;
+            }
+
+            section h2 {
+                font-size: 1.2rem;
+            }
+
+            .map-wrapper iframe {
+                height: 300px;
             }
         }
     </style>
@@ -148,8 +189,7 @@
             The Rural Doctors Association of Southern Africa exists because rural
             healthcare is not a simplified version of urban healthcare. It is its
             own discipline, shaped by geography, scarcity, resilience, and deep
-            community connection. RuDASA works to ensure that the people who choose
-            this path are supported, heard, and equipped to thrive.
+            community connection.
         </p>
         <a href="#about" class="button">Learn More About RuDASA</a>
     </section>
@@ -157,70 +197,44 @@
     <section id="about">
         <h2>Who We Are</h2>
         <p>
-            RuDASA was founded in 1996 by a group of committed rural doctors who
-            recognized that rural healthcare professionals face unique professional,
-            clinical, and systemic challenges. What began as a regional initiative
-            has grown into a national network representing doctors and allied health
-            professionals working across South Africa’s rural landscape.
-        </p>
-        <p>
-            The organisation functions as a professional home for those practicing
-            in rural and remote settings, offering connection in environments where
-            professional isolation is often the norm.
+            RuDASA was founded in 1996 and represents healthcare professionals
+            working across South Africa’s rural landscape.
         </p>
     </section>
 
     <section id="mission">
         <h2>Vision and Mission</h2>
-        <p>
-            <strong>Vision:</strong> Quality healthcare for all rural people in Southern Africa.
-        </p>
-        <p>
-            <strong>Mission:</strong> To support and empower rural healthcare workers,
-            advocate for equitable health systems, influence policy, and strengthen
-            rural health services through collaboration, research, and shared expertise.
-        </p>
+        <p><strong>Vision:</strong> Quality healthcare for all rural people.</p>
+        <p><strong>Mission:</strong> Support and empower rural healthcare workers.</p>
     </section>
 
     <section id="work">
         <h2>What We Do</h2>
         <p>
-            RuDASA operates as a professional network, an advocacy body, and a platform
-            for shared learning. The organisation facilitates peer support, provides
-            a collective voice for rural clinicians, and contributes to national
-            conversations on health policy, workforce planning, and service delivery.
-        </p>
-        <p>
-            Through partnerships, conferences, position statements, and ongoing
-            engagement with government and civil society, RuDASA works to translate
-            lived rural experience into informed action.
-        </p>
+            RuDASA was founded in 1996 by a group of committed rural doctors who recognized that rural healthcare professionals face unique professional, clinical, and systemic challenges. What began as a regional initiative has grown into a national network representing doctors and allied health professionals working across South Africa’s rural landscape.
+
+The organisation functions as a professional home for those practicing in rural and remote settings, offering connection in environments where professional isolation is often the norm.  </p>
     </section>
 
     <section id="map">
         <h2>RuDASA Rural Health Footprint</h2>
-        <p>
-            This live dashboard shows hospitals and doctors across South Africa.
-        </p>
+        <p>This live dashboard shows hospitals and doctors across South Africa.</p>
 
-        <!-- YOUR NEW IFRAME (UNCHANGED) -->
-        <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/8eb7697a-47d1-4c7d-9be1-e4376ad0a271/page/yYwtF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        <div class="map-wrapper">
+            <!-- YOUR IFRAME (UNCHANGED) -->
+            <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/8eb7697a-47d1-4c7d-9be1-e4376ad0a271/page/yYwtF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </div>
 
     </section>
 
     <section id="membership">
         <h2>Membership</h2>
-        <p>
-            RuDASA membership is open to doctors, allied health professionals,
-            and students with an interest in rural medicine.
-        </p>
+        <p>Join a network of professionals committed to rural healthcare.</p>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>
-            <strong>Email:</strong> info@rudasa.org.za
-        </p>
+        <p><strong>Email:</strong> info@rudasa.org.za</p>
     </section>
 
 </main>
