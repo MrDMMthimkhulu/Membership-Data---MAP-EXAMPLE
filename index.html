@@ -65,7 +65,7 @@
             font-weight: bold;
         }
 
-        /* 🔥 BIGGER & BETTER MAP */
+        /* 🔥 MAP */
         .map-wrapper {
             width: 100%;
             display: flex;
@@ -73,8 +73,8 @@
         }
 
         .map-wrapper iframe {
-            width: 100% !important;   /* fills container */
-            height: 700px !important; /* bigger map */
+            width: 100% !important;
+            height: 700px !important; /* desktop size */
             max-width: 100%;
             display: block;
         }
@@ -86,13 +86,8 @@
             padding: 2rem 1rem;
         }
 
-        /* 📱 MOBILE */
+        /* 📱 TABLETS */
         @media (max-width: 768px) {
-
-            main {
-                width: 100%;
-            }
-
             section {
                 padding: 2rem 1rem;
             }
@@ -103,13 +98,14 @@
             }
 
             .map-wrapper iframe {
-                height: 400px !important;
+                height: 600px !important; /* bigger */
             }
         }
 
+        /* 📱 PHONES (🔥 BIG HERE) */
         @media (max-width: 480px) {
             .map-wrapper iframe {
-                height: 320px !important;
+                height: 750px !important; /* MUCH bigger on phones */
             }
         }
     </style>
@@ -159,7 +155,8 @@
     <section id="work">
         <h2>What We Do</h2>
         <p>
-            RuDASA was founded in 1996 by a group of committed rural doctors who recognized that rural healthcare professionals face unique professional, clinical, and systemic challenges. What began as a regional initiative has grown into a national network representing doctors and allied health professionals working across South Africa’s rural landscape. The organisation functions as a professional home for those practicing in rural and remote settings, offering connection in environments where professional isolation is often the norm.
+            RuDASA was founded in 1996 and represents healthcare professionals
+            working across South Africa’s rural landscape.
         </p>
     </section>
 
