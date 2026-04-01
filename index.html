@@ -65,14 +65,17 @@
             font-weight: bold;
         }
 
-        /* 🔥 MAP FIX */
+        /* 🔥 BIGGER & BETTER MAP */
         .map-wrapper {
             width: 100%;
             display: flex;
-            justify-content: center; /* centers iframe */
+            justify-content: center;
         }
 
         .map-wrapper iframe {
+            width: 100% !important;   /* fills container */
+            height: 700px !important; /* bigger map */
+            max-width: 100%;
             display: block;
         }
 
@@ -83,7 +86,7 @@
             padding: 2rem 1rem;
         }
 
-        /* 📱 MOBILE FIX */
+        /* 📱 MOBILE */
         @media (max-width: 768px) {
 
             main {
@@ -99,16 +102,14 @@
                 margin: 0.5rem 0;
             }
 
-            /* 🔥 CRITICAL FIX FOR YOUR ISSUE */
             .map-wrapper iframe {
-                width: 100% !important;
-                height: 350px !important;
+                height: 400px !important;
             }
         }
 
         @media (max-width: 480px) {
             .map-wrapper iframe {
-                height: 300px !important;
+                height: 320px !important;
             }
         }
     </style>
